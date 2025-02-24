@@ -1,0 +1,44 @@
+flowchart TB
+    A[Utente da Campagna] --> B{Landing Page}
+    B -->|Compila Quiz| C[Lead Qualificato]
+    B -->|Acquisto Diretto| D[Nuovo Cliente]
+    B -->|Abbandono| E[Retargeting]
+
+    C --> F[Segmentazione DB]
+    D --> F
+    E --> G[Re-engagement Campaign]
+    G -->|Ritorno| B
+
+    F --> H{Preferenze Culinarie}
+    F --> I{Comportamento Acquisto}
+    F --> J{Origine Geografica}
+
+    H --> K[Email Personalizzate]
+    I --> K
+    J --> K
+
+    K --> L[Push Notification]
+    K --> M[Remarketing Ads]
+    K --> N[SMS Promozioni]
+
+    L --> O[Engagement Metrics]
+    M --> O
+    N --> O
+
+    O --> P[Aggiornamento Profilo]
+    P --> Q[Comunicazioni Future]
+
+    subgraph "Data Collection"
+    R[Cookie First-Party]
+    S[Email Tracking]
+    T[Form Submission]
+    U[Purchase Behavior]
+    V[Website Navigation]
+    end
+
+    subgraph "Automation Tools"
+    W[Klaviyo Integration]
+    X[Google Analytics 4]
+    Y[CRM Integration]
+    Z[Custom Audience Meta]
+    end
